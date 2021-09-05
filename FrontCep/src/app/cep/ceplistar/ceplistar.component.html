@@ -1,0 +1,18 @@
+<div *ngIf="enderecos.length != 0">
+    <table  mat-table [dataSource]="enderecos" class="mat-elevation-z8">
+        <ng-container matColumnDef="Cep">
+            <th mat-header-cell *matHeaderCellDef>CEPS</th>
+            <td mat-cel *matCellDef="let endereco">{{endereco.Cep}}</td>
+        </ng-container>
+        <ng-container matColumnDef="Logradouro">
+            <th mat-header-cell *matHeaderCellDef>LOGRADOURO</th>
+            <td mat-cel *matCellDef="let endereco">{{endereco.Logradouro}}</td>
+        </ng-container>
+        <ng-container matColumnDef="Complemento">
+          <th mat-header-cell *matHeaderCellDef>COMPLEMENTO</th>
+          <td mat-cel *matCellDef="let endereco">{{endereco.Complemento}}</td>
+      </ng-container>
+        <tr mat-header-row *matHeaderRowDef="colunas"></tr>
+        <tr mat-row *matRowDef="let row; columns: colunas"></tr>
+    </table>
+</div>
