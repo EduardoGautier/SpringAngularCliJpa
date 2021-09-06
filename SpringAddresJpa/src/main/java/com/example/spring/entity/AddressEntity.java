@@ -145,5 +145,15 @@ public class AddressEntity {
 
 
 
+
+	@Override
+	public String toString() {
+		return "AddressEntity [id=" + id + ", publicPlace=" + publicPlace + ", zipCode=" + zipCode + ", complement="
+				+ complement + ", district=" + district + ", location=" + location + ", federativeUnit="
+				+ federativeUnit + "]";
+	}
+
+	
+
 	
 }

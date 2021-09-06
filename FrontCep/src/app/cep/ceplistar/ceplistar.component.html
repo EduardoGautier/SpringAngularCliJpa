@@ -12,7 +12,31 @@
           <th mat-header-cell *matHeaderCellDef>COMPLEMENTO</th>
           <td mat-cel *matCellDef="let endereco">{{endereco.Complemento}}</td>
       </ng-container>
-        <tr mat-header-row *matHeaderRowDef="colunas"></tr>
-        <tr mat-row *matRowDef="let row; columns: colunas"></tr>
+      <ng-container matColumnDef="Bairro">
+        <th mat-header-cell *matHeaderCellDef>BAIRRO</th>
+        <td mat-cel *matCellDef="let endereco">{{endereco.Bairro}}</td>
+      </ng-container>
+      <ng-container matColumnDef="Localidade">
+        <th mat-header-cell *matHeaderCellDef>LOCALIDADE</th>
+        <td mat-cel *matCellDef="let endereco">{{endereco.Localidade}}</td>
+      </ng-container>
+      <ng-container matColumnDef="UF">
+        <th mat-header-cell *matHeaderCellDef>UF</th>
+        <td mat-cel *matCellDef="let endereco">{{endereco.UF}}</td>
+      </ng-container>
+      <ng-container matColumnDef="Action" >
+        <th mat-header-cell *matHeaderCellDef >Ações</th>
+        <td mat-cel *matCellDef="let endereco" (click)="deleteAdress(endereco.id)" >
+          <div>
+          <i class = "material-icons">
+            delete
+          </i>
+        </div>
+      </ng-container>
+        <tr mat-header-row *matHeaderRowDef="colunas" ></tr>
+        <tr mat-row *matRowDef="let row; columns: colunas" ></tr>
+
+
     </table>
+
 </div>
