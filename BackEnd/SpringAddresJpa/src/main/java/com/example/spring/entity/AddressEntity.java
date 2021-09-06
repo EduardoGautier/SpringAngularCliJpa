@@ -19,7 +19,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 @JsonDeserialize(using = com.example.spring.controller.JacksonCustomAddressEntityDeserializer.class)
 public class AddressEntity {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@Column(name = "zipCode")
@@ -64,13 +64,6 @@ public class AddressEntity {
 	public Long getId() {
 		return id;
 	}
-
-
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
 
 
 	public String getZipCode() {
