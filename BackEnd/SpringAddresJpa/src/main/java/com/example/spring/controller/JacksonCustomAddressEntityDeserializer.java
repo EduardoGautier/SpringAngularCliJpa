@@ -27,8 +27,8 @@ public class JacksonCustomAddressEntityDeserializer extends StdDeserializer<Addr
 	public AddressEntity deserialize(JsonParser parser, DeserializationContext context) throws IOException, JsonProcessingException {
 		JsonNode node = parser.getCodec().readTree(parser);
 		AddressEntity address = new AddressEntity();
-		String zip = node.get("cep").asText(null);
-		String publicPlace = node.get("logradouro").asText(null);
+		String zip = node.get("Cep").asText(null);
+		String publicPlace = node.get("Logradouro").asText(null);
 		String complement = node.get("Complemento").asText(null);
 		String district = node.get("Bairro").asText(null);
 		String location = node.get("Localidade").asText(null);

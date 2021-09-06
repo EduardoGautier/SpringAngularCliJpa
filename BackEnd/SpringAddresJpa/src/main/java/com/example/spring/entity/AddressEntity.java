@@ -66,6 +66,13 @@ public class AddressEntity {
 	}
 
 
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+
 	public String getZipCode() {
 		return zipCode;
 	}

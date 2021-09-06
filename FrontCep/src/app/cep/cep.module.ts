@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CeplistarComponent } from './ceplistar/ceplistar.component';
 import { CepsRoutingModule } from './ceps-routing.module';
 import { MatInputModule } from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -20,6 +21,7 @@ import { CepcadastrarComponent } from './cepcadastrar/cepcadastrar.component';
     MatTableModule,
     MatInputModule,
     MatSelectModule,
+    MatButtonModule,
     ReactiveFormsModule,
     CepsRoutingModule
   ]
