@@ -34,16 +34,27 @@ public class AddressRestController {
 		System.out.println(repository.findAll());
 		return repository.findAll();
 	}
+
+	@GetMapping("/id/{id}")
+	public AddressEntity getAddressById(@PathVariable long id){
+		return repository.findById(id);
+	}
+	
 	
 	@DeleteMapping("/{id}")
 	public void deleteById(@PathVariable Long id) {
 		repository.deleteById(id);
 	}
-	
+
 	@PostMapping("/add")
 	public AddressEntity addNewCep(@RequestBody AddressEntity cep) {
-		System.out.print(cep);
-		return repository.save(cep);
+		System.out.println(cep);
+		AddressEntity addressFront = repository.findByzipCode(cep.getZipCode());
+		if(addressFront == null) {
+			return repository.save(cep);
+		}else {
+			return null;
+		}
 	}
 	
 

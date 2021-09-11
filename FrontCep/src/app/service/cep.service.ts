@@ -16,6 +16,9 @@ export class CepService {
   public getAdress(cep: string){
     return this.api.get<Endereco>(`${CEP_API_URL}/${cep}`)
   }
+  public getAddressById(id: number){
+    return this.api.get<Endereco>(`${CEP_API_URL}/id/${id}`)
+  }
 
   public setAdress(cep: Endereco){
     return this.api.post<Endereco>(`${CEP_API_URL}/add`,cep)
@@ -23,7 +26,6 @@ export class CepService {
   public deleteAdress(id:number){
     return this.api.delete(`${CEP_API_URL}/${id}`);
   }
-
 
 
 }

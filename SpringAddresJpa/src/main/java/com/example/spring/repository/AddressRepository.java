@@ -13,4 +13,6 @@ public interface AddressRepository extends CrudRepository<AddressEntity, Long> {
 
 	public List<AddressEntity> findAll();
 	
+	public AddressEntity findById(long id);
+	
 }

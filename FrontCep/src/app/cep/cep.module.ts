@@ -8,13 +8,17 @@ import { MatSelectModule } from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CepcadastrarComponent } from './cepcadastrar/cepcadastrar.component';
+import { CepeditarComponent } from './cepeditar/cepeditar.component';
+import { FormsModule }   from '@angular/forms';
+
 
 
 
 @NgModule({
   declarations: [
     CeplistarComponent,
-    CepcadastrarComponent
+    CepcadastrarComponent,
+    CepeditarComponent
   ],
   imports: [
     CommonModule,
@@ -22,6 +26,7 @@ import { CepcadastrarComponent } from './cepcadastrar/cepcadastrar.component';
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
+    FormsModule,
     ReactiveFormsModule,
     CepsRoutingModule
   ]

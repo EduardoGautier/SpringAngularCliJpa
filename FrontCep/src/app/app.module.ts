@@ -11,6 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule }   from '@angular/forms';
 import{MatTableModule } from '@angular/material/table';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BoasvindasComponent } from './boasvindas/boasvindas.component';
@@ -32,9 +34,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
+    FormsModule,
     MatTableModule,
     MatIconModule,
     MatListModule,
+    MatFormFieldModule,
     ReactiveFormsModule,
     HttpClientModule,
     CepModule,

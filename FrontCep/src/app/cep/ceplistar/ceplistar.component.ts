@@ -1,6 +1,8 @@
 import { CepService } from './../../service/cep.service';
 import { Component, OnInit } from '@angular/core';
 import { Endereco } from 'src/app/model/cep.model';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-ceplistar',
   templateUrl: './ceplistar.component.html',
@@ -9,7 +11,7 @@ import { Endereco } from 'src/app/model/cep.model';
 export class CeplistarComponent implements OnInit {
   colunas : string[] = ['Cep','Logradouro','Complemento','Bairro', 'Localidade', 'UF','Action']
   enderecos : Endereco[] = []
-  constructor(private cepService: CepService) { }
+  constructor(private cepService: CepService,private router: Router) { }
 
   ngOnInit(): void {
     this.cepService.getAllAdressess().subscribe(
@@ -38,6 +40,11 @@ deleteAdress(id:number){
       alert('Erro ao buscar usuarios');
     }
   );
+}
+editAddress(id: number){
+  console.log("Entrou")
+  this.ngOnInit()
+  this.router.navigate([`ceps/editar/${id}`]);
 }
 
 }
